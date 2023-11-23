@@ -22,13 +22,16 @@ export class RecipeService {
     new Recipe(
       'Another Test Recipe',
       'This is simply a test',
-      'https://www.cookipedia.co.uk/wiki/images/3/3d/Ready_steady_pasta_recipe_recipe.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b0/Hamburger_%2812164386105%29.jpg',
       [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]
     ),
   ];
 
-  getRecipe() {
+  getRecipes() {
     return this.recipes.slice();
+  }
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
